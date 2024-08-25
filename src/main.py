@@ -1,5 +1,6 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QMessageBox
+from PyQt5.QtGui import QIcon
 
 class Calculator(QWidget):
     
@@ -9,6 +10,7 @@ class Calculator(QWidget):
         
     def initUI(self):
         self.setWindowTitle('Calculator')
+        self.setWindowIcon(QIcon('../image/icon.png'))
         self.resize(256,256)
         self.show()
         
