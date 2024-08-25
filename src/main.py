@@ -12,6 +12,7 @@ class Calculator(QWidget):
         self.setWindowTitle('Calculator')
         self.setWindowIcon(QIcon('../image/icon.png'))
         self.resize(256,256)
+        
         self.show()
         
 if __name__=="__main__":
