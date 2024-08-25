@@ -9,11 +9,24 @@ class Calculator(QWidget):
         self.initUI()
         
     def initUI(self):
+        self.btn1=QPushButton('Message',self)
+        self.btn1.clicked.connect(self.activateMessage)
+        
+        vbox=QVBoxLayout()
+        vbox.addStretch(1)
+        vbox.addWidget(self.btn1)
+        vbox.addStretch(1)
+        
+        self.setLayout(vbox)
+        
         self.setWindowTitle('Calculator')
-        self.setWindowIcon(QIcon('../image/icon.png'))
+        self.setWindowIcon(QIcon('C:\\Users\\kkc28\\vs_code_project\\calculator\\image\\icon.png'))
         self.resize(256,256)
         
         self.show()
+        
+    def activateMessage(self):
+        QMessageBox.information(self,"information","Button Clicked!")
         
 if __name__=="__main__":
     app = QApplication(sys.argv)
